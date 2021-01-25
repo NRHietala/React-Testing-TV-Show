@@ -32,7 +32,7 @@ export default function App() {
     // Separated fetchShow into separate file and imported in
     fetchShow()
     .then(res => {
-      console.log(res)
+      console.log(res.data._embedded.episodes[0])
       setShow(res.data);
       setSeasons(formatSeasons(res.data._embedded.episodes));
     })
