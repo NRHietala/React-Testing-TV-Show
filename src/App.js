@@ -16,25 +16,29 @@ export default function App() {
 
   useEffect(() => {
 
-    // Create and excute fetchShow on same file
+    // Office hours solution *******************************************
 
-    // const fetchShow = () => {
-    //   axios
-    //     .get(
-    //       "https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes"
-    //     )
-    //     .then(res => {
-    //       setShow(res.data);
-    //       setSeasons(formatSeasons(res.data._embedded.episodes));
-    //     });
-    // };
+    // const getData() = async () => {
+      // try{
+        //   const resp = await.fetchShow()
+    //   setShow(resp);
+    //   setSeasons(formatSeasons(resp._embedded.episodes));
+      // } catch(err) {
+      //   console.log(err)
+      // }
+    // }
+
+    /***********************************************************/
 
     // Separated fetchShow into separate file and imported in
     fetchShow()
     .then(res => {
-      console.log(res.data._embedded.episodes[0])
+      console.log(res);
       setShow(res.data);
       setSeasons(formatSeasons(res.data._embedded.episodes));
+    })
+    .catch(err => {
+      console.log(err)
     })
   }, []);
 

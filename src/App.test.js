@@ -21,37 +21,11 @@ test('App renders without shows, shows"...fetching data"', () => {
   expect(item).toBeInTheDocument();
 });
 
-test('App renders with menu', async () => {
+// test('App renders with menu', async () => {
 
-  render(<App show={true}/>);
+//   render(<App show={true}/>);
 
-  const menu = screen.getByText(/select a season/i);
+//   const menu = screen.getByText(/select a season/i);
 
-  expect(menu).toBeInTheDocument();
-})
-
-
-
-
-
-
-
-
-
-
-// test("Render's TV data when component mounts", async () => {
-//    // Arrange
-//   mockFetchShows.mockResolvedValueOnce([
-//     {name: "Episode 1", season:"1"},
-//     {name: "Episode 2", season:"2"}
-//   ])
-
-//   render(<App />);
-
-//   // Act
-//     await waitFor(()=> {
-//       expect(screen.getAllByText(/episode/i)).toHaveLength(2);
-//     })
-
-//   // Assert
+//   expect(menu).toBeInTheDocument();
 // })
