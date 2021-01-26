@@ -19,14 +19,14 @@ test('Episodes renders without errors', () => {
 
 })
 
-// test('Episodes renders without errors', async () => {
+test('Episodes renders without errors', async () => {
 
-//   const { rerender } = render(<Episodes episodes={[dummyData]}/>);
+  const { rerender } = render(<Episodes episodes={[dummyData]}/>);
 
-//   rerender(<Episodes espisodes={[dummyData]}/>)
+  rerender(<Episodes espisodes={[dummyData]}/>)
 
-//   const episode = await screen.getByText(/episode/i)
+  const episode = await screen.findByText(/episode/i)
 
-//   expect(episode).toHaveLength(1);
+  expect(episode).toHaveLength(1);
 
-// })
+})
