@@ -18,14 +18,16 @@ export default function App() {
 
     // Office hours solution *******************************************
 
-    // const getData() = async () => {
-      // try{
-        //   const resp = await.fetchShow()
-    //   setShow(resp);
-    //   setSeasons(formatSeasons(resp._embedded.episodes));
-      // } catch(err) {
-      //   console.log(err)
-      // }
+    // const getData = async () => {
+    //   console.log('getData')
+    //   try{
+    //     const resp = await fetchShow()
+    //     console.log(resp)
+    //     setShow(resp);
+    //     setSeasons(formatSeasons(resp._embedded.episodes));
+    //   } catch (err) {
+    //     console.log(err)
+    //   }
     // }
 
     /***********************************************************/

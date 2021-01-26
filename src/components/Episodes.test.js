@@ -4,10 +4,14 @@ import userEvent from '@testing-library/user-event';
 
 import Episodes from './Episodes';
 
-const dummyData = {
+const dummyData = [{
   id: 1,
   name: "Episode 1",
-}
+},
+{
+  id:2,
+  name:"Episode 2"
+}]
 
 test('Episodes renders without errors', () => {
 
@@ -15,14 +19,14 @@ test('Episodes renders without errors', () => {
 
 })
 
-test('Episodes renders without errors', async () => {
+// test('Episodes renders without errors', async () => {
 
-  const { rerender } = await render(<Episodes episodes={[dummyData]}/>);
+//   const { rerender } = render(<Episodes episodes={[dummyData]}/>);
 
-  rerender(<Episodes espisodes={dummyData}/>)
+//   rerender(<Episodes espisodes={[dummyData]}/>)
 
-  const episode = screen.getByText(/episode/i)
+//   const episode = await screen.getByText(/episode/i)
 
-  expect(episode).toHaveLength(1);
+//   expect(episode).toHaveLength(1);
 
-})
+// })
